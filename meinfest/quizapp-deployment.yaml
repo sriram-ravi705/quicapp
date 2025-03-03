@@ -21,7 +21,7 @@ spec:
         io.kompose.service: quizapp
     spec:
       containers:
-        - image: sriramravi477/quiz-app:latest
+        - image: sriramravi477/quiz-app:24
           name: quizapp
           imagePullPolicy: Always
           ports:
