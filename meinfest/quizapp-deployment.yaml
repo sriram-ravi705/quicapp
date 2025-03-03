@@ -21,8 +21,8 @@ spec:
         io.kompose.service: quizapp
     spec:
       containers:
-        - image: sriramravi477/nginx-container:latest
-          name: nginx-container
+        - image: sriramravi477/quiz-app:latest
+          name: sriramravi477/quiz-app
           imagePullPolicy: Always
           ports:
             - containerPort: 80
