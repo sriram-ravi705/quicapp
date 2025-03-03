@@ -1,0 +1,13 @@
+services:
+  quizapp:
+    build: .
+    container_name: quizapp
+    ports:
+      - 80:80
+    restart: always
+    networks:
+      - quiz_network
+    
+networks:
+  quiz_network:
+    driver: bridge
