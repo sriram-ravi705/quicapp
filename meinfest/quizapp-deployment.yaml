@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - image: sriramravi477/quiz-app:latest
-          name: sriramravi477/quiz-app
+          name: quiz-app
           imagePullPolicy: Always
           ports:
             - containerPort: 80
