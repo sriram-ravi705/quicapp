@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - image: sriramravi477/nginx-container:latest
-          name: quizapp
+          name: nginx-container
           imagePullPolicy: Always
           ports:
             - containerPort: 80
