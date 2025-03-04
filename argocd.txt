@@ -16,6 +16,7 @@ argocd login $ARGOCD_SERVER --username admin --password $ARGO_PWD --insecure
 - kubectl get svc -n argocd
 - kubectl port-forward -n argocd svc/argocd-server 80 80:443(alternative for before steps)
 - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+<<<<<<< HEAD
 
 
 - kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -27,3 +28,5 @@ argocd login $ARGOCD_SERVER --username admin --password $ARGO_PWD --insecure
 - helm upgrade -i prometheus prometheus-community/prometheus --namespace prometheus --set alertmanager.persistence.storageClass="gp2" --set server.persistentVolume.storageClass="gp2"
 - kubectl get pods -n prometheus
 - kubectl --namespace=prometheus port-forward deploy/prometheus-server 9090
+=======
+>>>>>>> 18ab1f8d1dce004e096a980e508d86efe327b0da
