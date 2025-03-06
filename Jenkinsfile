@@ -1,7 +1,9 @@
 pipeline {
     agent any
+    
     environment {
         Docker_User = credentials('	Docker_User')
+        sonarScanner = tool name : 'sonar-scanner'
     }
     stages {
         stage('Git Checkout') {
@@ -9,9 +11,27 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sriram-ravi705/quicapp.git']])
             }
         }
+        stage('Code Quality') {
+            steps {
+                script{
+                    withSonarQubeEnv('sonar-scanner') {
+                       sh '''
+                       ${sonarScanner}/bin/sonar-scanner \
+                          -Dsonar.projectKey=javascripapp \
+                          -Dsonar.sources=.
+                       '''
+                    }
+                }
+            }
+        }
         stage('Docker Build') {
             steps {
                 sh 'docker build -t sriramravi477/quiz-app:${BUILD_ID} .'
+            }
+        }
+        stage('Image Quality Scan') {
+            steps {
+                sh 'trivy image sriramravi477/quiz-app:${BUILD_ID}'
             }
         }
         stage('Docker Push') {
