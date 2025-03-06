@@ -19,4 +19,4 @@
 
 **Architecture**:
 
-![](./Diagram%20(1).png)
+![](./Architecture.png)
