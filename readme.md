@@ -1,6 +1,6 @@
 # **Project Title**: CI/CD Pipeline Integration Automated Deployment to Amazon EKS
 
-**Technologies Used**: GitHub, Jenkins, Docker, ArgoCD, Amazon EKS, Webhooks
+**Technologies Used**: GitHub, Jenkins, Docker, ArgoCD, Amazon EKS, Webhooks, Sonarqube, Trivy, Prometheus, Grafana
 
 **Links**: [GitHub](https://github.com/sriram-ravi705/quicapp) 
 
