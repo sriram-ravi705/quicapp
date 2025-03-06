@@ -16,6 +16,9 @@
     
 * **EKS Cluster Deployment Automation**: Leveraged ArgoCD to continuously monitor and deploy updates to the Amazon EKS cluster whenever a manifest file change is detected, ensuring seamless application updates in the cloud environment.
     
+* **SonarQube and Trivy integration**: Implemented SonarQube for continuous code quality checks and Trivy for automated security vulnerability scanning, ensuring secure and high-quality code in every deployment.
+
+* **Prometheus and Grafana Integration**: Integrated Prometheus for monitoring and Grafana for visualization, sourced from ArtifactHub, to track application performance and system health.
 
 **Architecture**:
 
